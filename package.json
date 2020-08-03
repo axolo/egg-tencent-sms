@@ -8,7 +8,11 @@
   "keywords": [
     "egg",
     "eggPlugin",
-    "egg-plugin"
+    "egg-plugin",
+    "egg-tencent-sms",
+    "egg-tencent-cloud-sms",
+    "tencent sms",
+    "tencent cloud sms"
   ],
   "dependencies": {
     "tencentcloud-sdk-nodejs": "^3.0.220"
@@ -47,12 +51,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-tencent-sms.git"
+    "url": "git+https://github.com/axolo/egg-tencent-sms.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/axolo/egg-tencent-sms/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-tencent-sms#readme",
+  "homepage": "https://github.com/axolo/egg-tencent-sms#readme",
   "author": "Yueming Fang",
   "license": "MIT"
 }
