@@ -1,0 +1,58 @@
+{
+  "name": "@axolo/egg-tencent-sms",
+  "version": "0.0.1",
+  "description": "tencent cloud sms plugin for egg.js.",
+  "eggPlugin": {
+    "name": "tencentSms"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "dependencies": {
+    "tencentcloud-sdk-nodejs": "^3.0.220"
+  },
+  "devDependencies": {
+    "autod": "^3.1.0",
+    "autod-egg": "^1.1.0",
+    "egg": "^2.27.0",
+    "egg-bin": "^4.15.0",
+    "egg-ci": "^1.15.0",
+    "egg-mock": "^4.0.0",
+    "eslint": "^7.5.0",
+    "eslint-config-egg": "^8.0.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && egg-bin pkgfiles && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "egg-bin pkgfiles --check && npm run lint && npm run cov",
+    "pkgfiles": "egg-bin pkgfiles",
+    "autod": "autod"
+  },
+  "files": [
+    "app.js",
+    "agent.js",
+    "config",
+    "app",
+    "lib"
+  ],
+  "ci": {
+    "version": "8, 10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggjs/egg-tencent-sms.git"
+  },
+  "bugs": {
+    "url": "https://github.com/eggjs/egg/issues"
+  },
+  "homepage": "https://github.com/eggjs/egg-tencent-sms#readme",
+  "author": "Yueming Fang",
+  "license": "MIT"
+}
