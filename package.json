@@ -1,6 +1,6 @@
 {
   "name": "@axolo/egg-tencent-sms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tencent Cloud SMS plugin for Egg.js.",
   "eggPlugin": {
     "name": "tencentSms"

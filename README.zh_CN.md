@@ -14,7 +14,7 @@ npm i egg-tencent-sms --save
 // config/plugin.js
 exports.tencentSms = {
   enable: true,
-  package: 'egg-tencent-sms',
+  package: '@axolo/egg-tencent-sms',
 };
 ```
 
