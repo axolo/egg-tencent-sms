@@ -5,7 +5,7 @@
 ## Install
 
 ```bash
-npm i egg-tencent-sms --save
+npm i @axolo/egg-tencent-sms --save
 ```
 
 ## Usage

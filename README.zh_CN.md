@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-npm i egg-tencent-sms --save
+npm i @axolo/egg-tencent-sms --save
 ```
 
 ## 开启插件
