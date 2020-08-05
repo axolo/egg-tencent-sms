@@ -27,11 +27,33 @@ exports.tencentSms = {
 exports.tencentSms = {
   SecretId: 'SMS_SECRETID',
   SecretKey: 'SMS_SECRETKEY',
-  SmsSdkAppid: 'SMS_SDK_APPID',
-  Sign: 'SMS_SIGN',
-  TemplateID: 'SMS_TEMPLATEID',
+  SendSms: { // 腾讯云Action，定义的参数覆盖传入参数
+    SmsSdkAppid: 'SMS_SDK_APPID',
+    Sign: 'SMS_SIGN',
+    TemplateID: 'SMS_TEMPLATEID',
+  },
 };
 ```
+
+## API
+
+### exec(model, action, params)
+
+> 参数
+
+| params |  type  |       description        |
+| ------ | ------ | ------------------------ |
+| model  | string | 腾讯云短信model          |
+| action | string | 腾讯云短信action         |
+| params | object | 腾讯云短信action相关参数 |
+
+> 返回
+
+腾讯云短信响应（Promise格式）
+
+### send(params)
+
+即`this.exec('SendSmsRequest', 'SendSms', params)`.
 
 ## 例子
 
@@ -39,18 +61,24 @@ exports.tencentSms = {
 
 ```js
 'use strict';
+
 const Controller = require('egg').Controller;
 
 class SmsController extends Controller {
   async create() {
-    const { phone } = this.ctx.reqeust.body; // E.164格式
+    const { phone } = this.ctx.reqeust.body; // E.164 format
     const rand = parseInt(Math.random()*10000);
     const code = rand > 1000 ? rand : rand + 1000;
     const sms = this.app.tencentSms;
-    const send = await sms.send([ phone ], [ code ]);
+    const send = await sms.send({
+      PhoneNumberSet: [ phone ],
+      TemplateParamSet: [ code ],
+    });
     ctx.body = send;
   }
 }
+
+module.exports = SmsController;
 ```
 
 ## 提问交流
