@@ -41,7 +41,7 @@ exports.tencentSms = {
 
 > 参数
 
-| params |  type  |       description        |
+|  参数  |  类型  |           说明           |
 | ------ | ------ | ------------------------ |
 | model  | string | 腾讯云短信model          |
 | action | string | 腾讯云短信action         |
