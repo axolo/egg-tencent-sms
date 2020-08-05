@@ -1,6 +1,6 @@
 {
   "name": "@axolo/egg-tencent-sms",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tencent Cloud SMS plugin for Egg.js.",
   "eggPlugin": {
     "name": "tencentSms"
@@ -15,7 +15,7 @@
     "tencent cloud sms"
   ],
   "dependencies": {
-    "tencentcloud-sdk-nodejs": "^3.0.220"
+    "tencentcloud-sdk-nodejs": "^3.0.223"
   },
   "devDependencies": {
     "autod": "^3.1.0",
